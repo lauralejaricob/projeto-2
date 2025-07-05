@@ -1,160 +1,195 @@
+/* Importa fontes do Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Roboto&family=Roboto+Mono&display=swap');
 
+/* Define variáveis CSS globais para reutilização */
 :root {
-    --branco: white;
-    --cor-de-fundo: #540212;
-    --fundo-senha: #7A1F3D;
-    --fundo-texto: #7A1F50;
-    --borda: #410123;
-    --roboto: 'Roboto', sans-serif;
-    --roboto-mono: 'Roboto Mono', monospace;
+    --branco: white;  /* Cor branca */
+    --cor-de-fundo: #540212;  /* Cor de fundo principal (vinho escuro) */
+    --fundo-senha: #7A1F3D;  /* Cor de fundo do campo de senha */
+    --fundo-texto: #7A1F50;  /* Cor de fundo dos parâmetros */
+    --borda: #410123;  /* Cor das bordas */
+    --roboto: 'Roboto', sans-serif;  /* Fonte para texto normal */
+    --roboto-mono: 'Roboto Mono', monospace;  /* Fonte para códigos/títulos */
 }
 
+/* Reset básico para todos os elementos */
 * {
-    font-weight: 400;
+    font-weight: 400;  /* Peso da fonte regular */
 }
 
+/* Estilos globais do corpo do documento */
 body {
-    color: var(--branco);
-    background-color: var(--cor-de-fundo);
-    font-family: var(--roboto);
+    color: var(--branco);  /* Cor do texto */
+    background-color: var(--cor-de-fundo);  /* Cor de fundo */
+    font-family: var(--roboto);  /* Fonte padrão */
 }
 
+/* Estilos para o título principal */
 .titulo-principal {
-    font-family: var(--roboto-mono);
-    font-size: 32px;
+    font-family: var(--roboto-mono);  /* Fonte especial para títulos */
+    font-size: 32px;  /* Tamanho grande */
 }
 
+/* Estilos para o subtítulo */
 .titulo-secundario {
-    font-size: 24px;
+    font-size: 24px;  /* Tamanho médio */
 }
 
+/* Container do cabeçalho com ícone e títulos */
 .conteudo-titulo {
-    text-align: center;
-    margin-top: 80px;
+    text-align: center;  /* Centralizado */
+    margin-top: 80px;  /* Espaçamento superior */
 }
 
+/* Estilo da seção que contém o campo de senha */
 .conteudo-senha {
-    margin-top: 80px;
-    background: var(--fundo-senha);
-    padding: 24px;
-    border-bottom: 6px ridge var(--borda);
+    margin-top: 80px;  /* Espaçamento superior */
+    background: var(--fundo-senha);  /* Cor de fundo */
+    padding: 24px;  /* Espaçamento interno */
+    border-bottom: 6px ridge var(--borda);  /* Borda decorativa na parte inferior */
 }
 
+/* Estilo do campo onde a senha é exibida */
 #campo-senha {
-    background-color: var(--fundo-senha);
-    border: none;
-    color: var(--branco);
-    font-family: var(--roboto-mono);
-    font-size: 40px;
-    width: 70%;
+    background-color: var(--fundo-senha);  /* Cor de fundo igual ao container */
+    border: none;  /* Sem borda */
+    color: var(--branco);  /* Texto branco */
+    font-family: var(--roboto-mono);  /* Fonte monoespaçada */
+    font-size: 40px;  /* Tamanho grande */
+    width: 70%;  /* Largura relativa */
 }
 
+/* Remove contorno ao focar no campo */
 #campo-senha:focus {
     outline: none;
 }
 
+/* Container principal do conteúdo */
 .conteudo {
-    max-width: 1200px;
-    margin: 0 auto;
+    max-width: 1200px;  /* Largura máxima */
+    margin: 0 auto;  /* Centralizado */
 }
 
+/* Estilo da seção de parâmetros */
 .parametro {
-    background-color: var(--fundo-texto);
-    border: 2px ridge var(--borda);
-    margin-top: 32px;
-    padding: 24px;
+    background-color: var(--fundo-texto);  /* Cor de fundo */
+    border: 2px ridge var(--borda);  /* Borda decorativa */
+    margin-top: 32px;  /* Espaçamento superior */
+    padding: 24px;  /* Espaçamento interno */
 }
 
+/* Título da seção de parâmetros */
 .parametro-titulo {
-    font-family: var(--roboto-mono);
-    font-size: 28px;
+    font-family: var(--roboto-mono);  /* Fonte especial */
+    font-size: 28px;  /* Tamanho grande */
 }
 
+/* Títulos dos subgrupos de parâmetros */
 .parametro-senha__titulo {
-    font-size: 24px;
+    font-size: 24px;  /* Tamanho médio */
 }
 
+/* Layout das colunas de parâmetros (mobile first) */
 .parametro-coluna__senha {
     display: flex;
-    flex-direction: column;
+    flex-direction: column;  /* Empilhado verticalmente por padrão */
     justify-content: center;
 }
 
+/* Estilo de cada grupo de parâmetros */
 .parametro-senha {
-    width: 50%;
-    margin: 0 auto;
+    width: 50%;  /* Largura relativa */
+    margin: 0 auto;  /* Centralizado */
 }
 
+/* Container dos botões de incremento/decremento */
 .parametro-senha-botoes {
     display: flex;
-    justify-content: left;
-    margin-left: 20px;
+    justify-content: left;  /* Alinhado à esquerda */
+    margin-left: 20px;  /* Recuo */
 }
 
+/* Estilo dos botões +/- */
 .parametro-senha__botao {
-    background-color: var(--fundo-texto);
-    color: var(--branco);
-    border: 2px ridge var(--borda);
-    padding: 24px;
-    font-size: 24px;
-    cursor: pointer;
+    background-color: var(--fundo-texto);  /* Cor de fundo */
+    color: var(--branco);  /* Texto branco */
+    border: 2px ridge var(--borda);  /* Borda decorativa */
+    padding: 24px;  /* Espaçamento interno grande */
+    font-size: 24px;  /* Tamanho grande */
+    cursor: pointer;  /* Cursor de ponteiro */
 }
 
+/* Estilo do texto que mostra o número de caracteres */
 .parametro-senha__texto {
-    padding: 24px;
-    border-top: 2px ridge var(--borda);
-    border-bottom: 2px ridge var(--borda);
-    margin: 0;
-    font-size: 24px;
+    padding: 24px;  /* Espaçamento interno */
+    border-top: 2px ridge var(--borda);  /* Borda superior */
+    border-bottom: 2px ridge var(--borda);  /* Borda inferior */
+    margin: 0;  /* Sem margem */
+    font-size: 24px;  /* Tamanho grande */
 }
 
+/* Estilo padrão para labels */
 label {
-    font-size: 20px;
+    font-size: 20px;  /* Tamanho médio */
 }
 
+/* Estilo dos checkboxes */
 .checkbox {
-    width: 20px;
-    height: 20px;
-    cursor: pointer;
-    accent-color: rgba(255, 52, 130, 0.726);
+    width: 20px;  /* Tamanho fixo */
+    height: 20px;  /* Tamanho fixo */
+    cursor: pointer;  /* Cursor de ponteiro */
+    accent-color: rgba(255, 52, 130, 0.726);  /* Cor personalizada quando marcado */
 }
 
+/* Barra de fundo do indicador de força */
 .barra {
-    background-color: var(--fundo-senha);
-    height: 30px;
-    width: 100%;
+    background-color: var(--fundo-senha);  /* Cor de fundo */
+    height: 30px;  /* Altura fixa */
+    width: 100%;  /* Largura total */
 }
 
+/* Barra de força (sobrepõe a .barra) */
 .forca {
-    height: 30px;
-    position: relative;
-    bottom: 30px;
+    height: 30px;  /* Mesma altura da .barra */
+    position: relative;  /* Permite posicionamento relativo */
+    bottom: 30px;  /* Move para cima da .barra */
+}
+
+/* Classes para diferentes níveis de força (larguras e cores diferentes) */
+.muito-fraca {
+    width: 25%;  /* Muito curta */
+    background-color: #99023c;  /* Vermelho escuro */
 }
 
 .fraca {
-    width: 25%;
-    background-color: #ff0062;
+    width: 25%;  /* Curta */
+    background-color: #ff0062;  /* Vermelho */
 }
 
 .media {
-    background-color: #fc5998;
-    width: 50%;
+    width: 50%;  /* Metade do tamanho */
+    background-color: #fc5998;  /* Rosa médio */
 }
 
 .forte {
-    background-color: #fda8c9;
-    width: 100%;
+    width: 100%;  /* Comprimento total */
+    background-color: #fd97be;  /* Rosa claro */
 }
 
+.muito-forte {
+    width: 100%;  /* Comprimento total */
+    background-color: #fab0cc;  /* Rosa muito claro */
+}
+
+/* Container dos textos de força (Very Weak, Weak, etc) */
 .parametro-senha-textos {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between;  /* Espaçamento uniforme */
 }
 
-
+/* Media query para tablets e desktops */
 @media screen and (min-width: 768px) {
     .parametro-coluna__senha {
-        flex-direction: row;
+        flex-direction: row;  /* Altera para layout em linha em telas maiores */
     }
 }
